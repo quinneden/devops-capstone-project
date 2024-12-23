@@ -125,7 +125,7 @@ class TestAccountService(TestCase):
             content_type="test/html"
         )
         self.assertEqual(response.status_code, status.HTTP_415_UNSUPPORTED_MEDIA_TYPE)
-        
+
     def test_get_account_list_not_found(self):
         """It should not Get a List of Accounts that do not exist"""
         resp = self.client.get(BASE_URL)
